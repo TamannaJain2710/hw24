@@ -3,7 +3,7 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
- var paperball,box1,box2, box3,ground;
+ var paperball,box1,box2, box3,ground,bottom;
 function preload()
 {
 	
@@ -11,7 +11,7 @@ function preload()
 
 function setup() {
 	createCanvas(800, 700);
-
+	bottom = createSprite(650,600,20,150);
 
 	engine = Engine.create();
 	world = engine.world;
@@ -34,7 +34,7 @@ function draw() {
   background(0);
   paperball.display();
   box1.display();
-  box3.display();
+  bottom.display();
   box2.display();
   ground.display();
  // drawSprites();
