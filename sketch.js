@@ -34,8 +34,8 @@ function draw() {
   background(0);
   paperball.display();
   box1.display();
+  box3.display();
   bottom.display();
-  box2.display();
   ground.display();
  // drawSprites();
  
