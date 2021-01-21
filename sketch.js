@@ -11,18 +11,16 @@ function preload()
 
 function setup() {
 	createCanvas(800, 700);
-	bottom = createSprite(510,665,260,20);
-
 	engine = Engine.create();
 	world = engine.world;
-
+	bottom = createSprite(515,659,260,20);
 	//Create the Bodies Here.
-
+	
 
 
 	paperball = new Paper();
 	box1 = new Dustbin(390,600,20,150);
-	box2 = new Dustbin(510,665,260,20);
+	box2 = new Dustbin(515,659,260,20);
 	box3 = new Dustbin(650,600,20,150);
 	ground = new Ground();
 	Engine.run(engine);
@@ -36,9 +34,10 @@ function draw() {
   box1.display();
   box3.display();
   bottom.display();
-  ground.display();
- // drawSprites();
- 
+  ground.display(); 
+  drawSprites();
+  bottom.shapeColor = "225,225,225";
+  //paperball.collide(bottom);
 }
 
 function keyPressed(){
